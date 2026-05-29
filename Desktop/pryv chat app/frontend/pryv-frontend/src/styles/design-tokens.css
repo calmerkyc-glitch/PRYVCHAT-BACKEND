@@ -1,0 +1,46 @@
+:root{
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --accent: #6366f1; /* indigo-500 */
+  --muted: #6b7280;
+  --success: #10b981;
+  --warn: #f59e0b;
+  --card-radius: 20px;
+  --elevation-1: 0 6px 18px rgba(15,23,42,0.06);
+  --elevation-2: 0 10px 30px rgba(15,23,42,0.08);
+  --motion: 180ms cubic-bezier(.2,.9,.2,1);
+}
+
+/* Reusable card and hero utilities */
+.card{
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--elevation-1);
+  transition: box-shadow var(--motion), transform var(--motion);
+}
+.card:hover{box-shadow:var(--elevation-2);}
+
+.hero{
+  background: linear-gradient(180deg, rgba(99,102,241,0.06), rgba(99,102,241,0.02));
+  border-radius: calc(var(--card-radius) + 4px);
+  padding: 1.25rem;
+}
+
+.btn-primary{
+  background: var(--accent);
+  color: #fff;
+  border-radius: 9999px;
+  padding: .5rem 1rem;
+  transition: transform var(--motion), box-shadow var(--motion);
+}
+.btn-primary:active{transform:translateY(1px) scale(.998);}
+
+.muted-text{color:var(--muted)}
+
+.glass{
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(6px);
+}
+
+/* small utility for focus */
+.focus-ring:focus{outline:2px solid rgba(99,102,241,0.18); outline-offset:2px}
